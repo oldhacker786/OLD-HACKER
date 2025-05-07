@@ -31,10 +31,11 @@ except KeyError: print(' [ OUTPUT ] Error | config.ini not found!');sleep(3);exi
 http_proxies, socks4_proxies, socks5_proxies = [], [], []
 time_out = 15
 
-def save_proxies(proxies, proxy_type):
-    with open('NG.txt', 'w') as file:
-    for proxy in proxies:
-        file.write(proxy + '\n')
+with open(f"{proxy_type}_proxies.txt", 'w') as file:
+        for proxy in proxies:
+            file.write(proxy + '\n')
+
+
 
 def scrap(sources, _proxy_type):
     proxies = []
