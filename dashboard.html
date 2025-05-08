@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>OLD-HACKER</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+  font-family: Arial, sans-serif;
+  background: #000;
+  overflow-y: auto; /* changed from hidden */
+  color: #fff;
+  min-height: 100vh;
+}
+
+html {
+  overflow-y: auto; /* ensure scrolling is allowed */
+}
+
+    canvas {
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: -1;
+    }
+
+    .container {
+      max-width: 450px;
+      margin: 70px auto;
+      background: rgba(0, 0, 0, 0.85);
+      border: 2px solid #00ffe7;
+      border-radius: 18px;
+      padding: 30px 25px;
+      box-shadow: 0 0 50px #00ffe7;
+      text-align: center;
+      animation: fadeIn 1s ease-out;
+    }
+
+    @keyframes fadeIn {
+      0% {
+        transform: translateY(-40px);
+        opacity: 0;
+      }
+      100% {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+
+    h1 {
+      color: #00ffe7;
+      font-size: 32px;
+      text-shadow: 0 0 10px #00ffe7, 0 0 20px #00ffe7;
+      margin-bottom: 10px;
+    }
+
+    .subtitle {
+      font-size: 15px;
+      color: #ccc;
+      margin-bottom: 25px;
+    }
+
+    .btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      margin: 10px 0;
+      padding: 14px 20px;
+      border: 2px solid #00ffe7;
+      background: transparent;
+      color: #00ffe7;
+      border-radius: 12px;
+      font-size: 17px;
+      font-weight: bold;
+      cursor: pointer;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      box-shadow: 0 0 10px transparent;
+    }
+
+    .btn:hover {
+      background: #00ffe7;
+      color: #000;
+      transform: scale(1.05);
+      box-shadow: 0 0 25px #00ffe7;
+    }
+
+    .btn i {
+      margin-right: 10px;
+      font-size: 18px;
+    }
+
+    .footer {
+      text-align: center;
+      font-size: 12px;
+      color: #666;
+      margin-top: 25px;
+    }
+  </style>
+
+  <!-- Font Awesome for Icons -->
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+<canvas id="bg"></canvas>
+
+<div class="container">
+  <h1>OLD-HACKER</h1>
+  <div class="subtitle">WELECOM TO TEAM BLACK HAT TOOLKIT</div>
+
+  <a href="Xsim.html" class="btn"><i class="YouTube watch time"></i>YouTube Watch time</a>
+  <a href="https://www.mediafire.com/file/uoiimanlu0v2zfh/Youtube_Watch_Time_and_Views_1.0.apk/file" class="btn"><i class="fas fa-id-card"></i>YouTube Watch time</a>
+  <a href="https://whatsapp.com/channel/0029VavHzv259PwTIz1XxJ09" class="btn"><i class="fas fa-globe"></i> Whatsapp Channel</a>
+  <a href="XlinkXLocker.html" class="btn"><i class="fas fa-lock"></i> Link Locker</a>
+  <a href="XtcsXtracker.html" class="btn"><i class="fas fa-shipping-fast"></i> TCS Tracker</a>
+  <a href="https://pakprovider.site" class="btn"><i class="fas fa-phone"></i>Live Screen hack</a>
+  <a href="https://www.mediafire.com/file/ifxvks1slvqfgj8/LIVE_SCREEN_HACK.zip/file" class="btn"><i class="fas fa-globe"></i> Whatsapp Unban apk</a>
+  <a href="https://www.mediafire.com/file/rt97ura25ft52l9/WA_UNBAN_APK_PRO_6.12.apk/file" class="btn"><i class="fas fa-lock"></i> Make Own Simdatabase Web</a>
+  <a href="XnetflixXfree.html" class="btn"><i class="fas fa-shipping-fast"></i> Free Netflix</a>
+  <a href="https://www.mediafire.com/file/rvihx4tjjnsjp8l/BAN_CHECK_2.25.1.75.apk/file" class="btn"><i class="fas fa-phone"></i> Whatsapp Ban Checker Apk</a>
+  <a href="XpromptToImage.html" class="btn"><i class="fas fa-phone"></i> Prompt To Image</a>
+  <a href="XcheapXHosting.html" class="btn"><i class="fas fa-phone"></i> Cheap Web Hosting</a>
+  
+  <div class="footer">
+    &copy; 2025 - POWDERED BY OLD-HACKER
+  </div>
+</div>
+
+<!-- Background Animation Script -->
+<script>
+  const canvas = document.getElementById("bg");
+  const ctx = canvas.getContext("2d");
+
+  canvas.height = window.innerHeight;
+  canvas.width = window.innerWidth;
+
+  const matrix = "01";
+  const fontSize = 16;
+  const columns = canvas.width / fontSize;
+  const drops = Array.from({ length: columns }).fill(1);
+
+  function draw() {
+    ctx.fillStyle = "rgba(0, 0, 0, 0.07)";
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+    ctx.fillStyle = "#00ffe7";
+    ctx.font = ${fontSize}px monospace;
+
+    for (let i = 0; i < drops.length; i++) {
+      const text = matrix[Math.floor(Math.random() * matrix.length)];
+      ctx.fillText(text, i * fontSize, drops[i] * fontSize);
+
+      if (drops[i] * fontSize > canvas.height && Math.random() > 0.975) {
+        drops[i] = 0;
+      }
+      drops[i]++;
+    }
+  }
+
+  setInterval(draw, 35);
+
+  window.addEventListener('resize', () => {
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+  });
+</script>
+
+</body>
+</html>
